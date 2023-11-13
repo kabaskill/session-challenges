@@ -1,0 +1,42 @@
+//DOM (Document Object Model) Manipulation
+// Query the main element and log it to the console
+const mainElement = document.querySelector('[data-js="main"]');
+
+console.log(mainElement);
+
+// Change styling via classList
+mainElement.classList.add("dark");
+mainElement.classList.remove("dark");
+
+// React to events with addEventListener
+const myLoggingButton = document.querySelector('[data-js="logging-button"]');
+
+myLoggingButton.addEventListener("click", () => {
+  console.log("You clicked a button");
+});
+
+// Change color on button click
+
+const addColorButton = document.querySelector('[data-js="add-button"]');
+const removeColorButton = document.querySelector('[data-js="remove-button"]');
+const toggleColorButton = document.querySelector('[data-js="toggle-button"]');
+
+console.clear();
+const myToggleButton = document.querySelector('[data-js="my-button"]');
+const bodyElement = document.querySelector('[data-js="body"]');
+
+myToggleButton.addEventListener("click", () => {
+  bodyElement.classList.toggle("dark");
+});
+
+addColorButton.addEventListener("click", () => {
+  mainElement.classList.add("dark");
+});
+
+removeColorButton.addEventListener("click", () => {
+  mainElement.classList.remove("dark");
+});
+
+toggleColorButton.addEventListener("click", () => {
+  mainElement.classList.toggle("dark");
+});
