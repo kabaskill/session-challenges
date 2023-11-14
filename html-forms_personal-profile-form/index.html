@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Personal Profile Form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h1 id="profile-form">Create your Personal Profile</h1>
+    <section>
+      <form aria-labelledby="profile-form">
+        <p id="descriptrion">
+          We want to get to know you! Please enter your personal information.
+        </p>
+        <fieldset aria-describedby="descriptrion">
+          <legend>Personal Information</legend>
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" />
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" />
+          <label for="birthdate">Your Birthday:</label>
+          <input type="date" id="birthdate" />
+        </fieldset>
+
+        <p>
+          Can you tell us a little bit more? We want to annoy you with unwanted
+          ads.
+        </p>
+
+        <fieldset>
+          <legend>Further Information</legend>
+          <label for="fav-color">Favorite Color:</label>
+          <input type="color" id="fav-color" name="fav-color" value="#E5430F" />
+
+          <label for="">What is your favorite pet?</label>
+          <select name="" id="">
+            <option value="">--Please choose an option--</option>
+
+            <option value="0">I'm afraid of animals</option>
+            <option value="1">Cats</option>
+            <option value="2">Dogs</option>
+            <option value="3">Elephants</option>
+            <option value="4">Eagles</option>
+          </select>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
