@@ -10,6 +10,7 @@ function hideTosError() {
 
 function showTosError() {
   tosError.removeAttribute("hidden");
+  // console.log("show error");
 }
 
 form.addEventListener("submit", (event) => {
@@ -17,7 +18,8 @@ form.addEventListener("submit", (event) => {
 
   // --v-- write your code here --v--
 
-  if (tosCheckbox.value === "off") {
+  if (!tosCheckbox.checked) {
+    console.log("tosbox not checked");
     return;
   }
   // --^-- write your code here --^--
@@ -30,8 +32,8 @@ form.addEventListener("submit", (event) => {
 
 tosCheckbox.addEventListener("change", () => {
   // console.log("did a thing");
-
-  if (tosCheckbox.value === "on") {
+  // console.log(tosCheckbox.checked);
+  if (tosCheckbox.checked) {
     hideTosError();
   } else {
     showTosError();
