@@ -21,15 +21,21 @@ const firstNumber = numbers[0];
 // Change the fruit stored at index 0 of fruits to mango.
 
 const fruits = ["apple", "banana", "grapefruit"];
+
+// fruits = ["mango", "banana", "grapefruit"];
 fruits[0] = "mango";
+
+console.log(fruits[0].length);
+console.log(fruits.length[0]);
 
 // EXERCISE 5
 // Change the value of nestedNumber to equal the fourth number of nestedNumbers using bracket notation.
 
 const nestedNumbers = [10, [20, 30, [40, 50]]];
-
+// console.log("first", nestedNumbers[1]);
+// console.log("second", nestedNumbers[1][2]);
 const nestedNumber = nestedNumbers[1][2][0];
-console.log(nestedNumber);
+// console.log(nestedNumber);
 
 // EXERCISE 6
 // Put "rat" onto the end of petsWithPush variable by using the array method `.push()`.
@@ -37,7 +43,7 @@ console.log(nestedNumber);
 const petsWithPush = ["dog", "cat", "rabbit"];
 petsWithPush.push("rat");
 
-console.log(petsWithPush);
+// console.log(petsWithPush);
 
 // EXERCISE 7
 // Use the pop method to remove the last item from fruitsWithPop.
@@ -45,7 +51,7 @@ console.log(petsWithPush);
 const fruitsWithPop = ["apple", "banana", "mango"];
 fruitsWithPop.pop("rat");
 
-console.log(fruitsWithPop);
+// console.log(fruitsWithPop);
 
 // EXERCISE 8
 // Put "hamster" onto the start of unshiftedPets variable by using the array method unshift.
@@ -53,7 +59,7 @@ console.log(fruitsWithPop);
 const unshiftedPets = ["dog", "cat", "rabbit"];
 unshiftedPets.unshift("hamster");
 
-console.log(unshiftedPets);
+// console.log(unshiftedPets);
 
 // EXERCISE 9
 // Use the shift method to remove the first item from shiftedFruits.
@@ -62,7 +68,7 @@ const shiftedFruits = ["apple", "banana", "mango"];
 
 shiftedFruits.shift();
 
-console.log(shiftedFruits);
+// console.log(shiftedFruits);
 
 export {
   exampleArray,
