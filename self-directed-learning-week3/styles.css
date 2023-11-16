@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+  max-width: 400px;
+  padding: 20px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 10px;
+  background-color: rgb(197, 239, 239);
+
+  padding: 20px;
+}
+
+.output {
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 10px;
+  margin-block: 10px;
+}

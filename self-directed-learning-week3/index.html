@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form class="forms">
+      <label for="firstName">First Name</label>
+      <input name="firstName" id="firstName" data-js="name1" required />
+
+      <label for="lastName">Last Name</label>
+      <input name="lastName" id="lastName" data-js="name2" required />
+
+      <button data-js="button1">Generate Email</button>
+    </form>
+    <span class="output" data-js="generated-email">The email is: </span>
+
+    <form class="forms">
+      <label for="e-mail">Email</label>
+      <input type="email" name="e-mail" id="e-mail" data-js="email" required />
+
+      <button data-js="button2">Generate Name</button>
+    </form>
+    <span class="output" data-js="generated-name">The name is: </span>
+  </body>
+</html>
