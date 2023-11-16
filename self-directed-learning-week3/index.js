@@ -12,11 +12,11 @@ function generateEmail(obj) {
 
 function getUserFromEmail(str) {
   if (str.includes("@")) {
-    let userObj = str.split("@");
-    if (userObj[0].includes(".")) {
-      userObj = userObj[0].split(".");
+    str = str.split("@");
+    if (str[0].includes(".")) {
+      str = str[0].split(".");
       console.log("we have a guess");
-      return { firstName: userObj[0], lastName: userObj[1] };
+      return { firstName: str[0], lastName: str[1] };
     } else {
       console.log("no dot in the first part");
       return null;
@@ -39,12 +39,12 @@ const output2 = document.querySelector('[data-js="generated-name"]');
 
 button1.addEventListener("click", (event) => {
   event.preventDefault();
-  const userObj = {
+  const str = {
     firstName: `${inputName1.value}`,
     lastName: `${inputName2.value}`,
   };
-  output1.textContent += `${generateEmail(userObj)}`;
-  inputEmail.value = `${generateEmail(userObj)}`;
+  output1.textContent += `${generateEmail(str)}`;
+  inputEmail.value = `${generateEmail(str)}`;
 });
 
 button2.addEventListener("click", (event) => {
