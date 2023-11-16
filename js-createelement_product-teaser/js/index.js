@@ -11,9 +11,9 @@ const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
 
 const newArticle = document.createElement("article");
+newArticle.classList.add("product");
 
-newArticle.innerHTML = `  <article class="product">
-<div class="product__body">
+newArticle.innerHTML = `<div class="product__body">
   <div class="product__text-container">
     <h2 class="product__name" data-js="">${name}</h2>
     <ul class="product__categories">
@@ -34,8 +34,7 @@ newArticle.innerHTML = `  <article class="product">
 <footer class="product__footer">
   <span class="product__price">${price}</span>
   <button type="button" class="product__buy-button" data-js="second-button">Buy</button>
-</footer>
-</article>`;
+</footer>`;
 
 document.body.append(newArticle);
 
