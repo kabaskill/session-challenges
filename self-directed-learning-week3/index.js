@@ -7,6 +7,11 @@ const newUser = {
 
 function generateEmail(obj) {
   // function implementation
+
+  if (!user.lastName) {
+    return `${obj.firstName.toLowerCase()}.@example.com`;
+  }
+
   return `${obj.firstName.toLowerCase()}.${obj.lastName.toLowerCase()}@example.com`;
 }
 
