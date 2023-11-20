@@ -35,4 +35,4 @@ function renderColorBox(color) {
   document.body.append(boxColored);
 }
 
-colors.forEach((color) => renderColorBox(color));
+colors.forEach(renderColorBox);
