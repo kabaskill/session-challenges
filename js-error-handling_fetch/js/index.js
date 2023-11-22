@@ -5,40 +5,31 @@ const errorElement = document.querySelector(".error");
 
 async function loadUser(url) {
   console.log(url);
-
   errorElement.innerHTML = "";
   const response = await fetch(url);
+  const json = await response.json();
+  const user = json.data;
 
-  if (!response.ok) {
-    console.log("non valid URL");
-    errorHandle();
-    return null;
-  }
-
-  try {
-    const json = await response.json();
-    const user = json.data;
-
-    userElement.innerHTML = `
+  userElement.innerHTML = `
     <h2>${user.first_name} ${user.last_name}</h2>
     <img alt="${user.first_name} ${user.last_name}" src="${user.avatar}"/>
     `;
-  } catch (error) {
-    errorHandle();
-  }
 }
 
-document
-  .querySelectorAll("button[data-url]")
-  .forEach((button) =>
-    button.addEventListener("click", (event) =>
-      loadUser(event.target.dataset.url)
-    )
-  );
+document.querySelectorAll("button[data-url]").forEach((button) =>
+  button.addEventListener("click", async (event) => {
+    try {
+      await loadUser(event.target.dataset.url);
+    } catch (error) {
+      errorHandle("There is an error");
+      console.error(error);
+    }
+  })
+);
 
-function errorHandle() {
+function errorHandle(str) {
   userElement.innerHTML = `<img src="https://media.tenor.com/h5ek52i5ww4AAAAM/oh-no-swag.gif"/>`;
-  errorElement.innerHTML = "uh-oh, did the thing!";
+  errorElement.innerHTML = str;
 }
 
 //INFO FROM THE ACTIVE LEARNING HANDOUT - USED IT TO PLACE TRY AND CATCH

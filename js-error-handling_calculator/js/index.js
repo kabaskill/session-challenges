@@ -29,5 +29,6 @@ form.addEventListener("submit", (event) => {
     console.log("🚀  errorElement:", errorElement);
     errorElement.innerHTML =
       "You are being naughty aren't ya? </br> You can't divide things with zero. </br> Not in my website!";
+    console.error(error);
   }
 });
