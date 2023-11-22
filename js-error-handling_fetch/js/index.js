@@ -41,6 +41,8 @@ function errorHandle() {
   errorElement.innerHTML = "uh-oh, did the thing!";
 }
 
+//INFO FROM THE ACTIVE LEARNING HANDOUT - USED IT TO PLACE TRY AND CATCH
+
 //   const API_URL = 'https://reqres.in/unknown-page';
 
 // async function getUser() {
