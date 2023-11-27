@@ -6,14 +6,7 @@ export default function App() {
     alert("You clicked me!");
   }
 
-  return (
-    <Button
-      color=" #f78e78"
-      disabled={false}
-      text="Let's go"
-      onClick={handleClick}
-    />
-  );
+  return <Button color=" #f78e78" text="Let's go" onClick={handleClick} />;
 }
 
 function Button({ color, disabled, text, onClick }) {
