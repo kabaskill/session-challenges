@@ -50,9 +50,7 @@ function App() {
   const [filter, setFilter] = useState(filters.all);
   const [entries, setEntries] = useState(initialEntries);
 
-  const filteredEntries = entries.filter(
-    (entry) => filter === filters.favorite && entry.isFavorite
-  );
+  const filteredEntries = entries.filter((entry) => entry.isFavorite);
 
   function handleAddEntry(entry) {
     const date = new Date().toLocaleDateString("en-us", {
