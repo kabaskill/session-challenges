@@ -25,8 +25,8 @@ export default function TheTwoTowers() {
       />
       <p>{slug.description}</p>
       <ul>
-        {slug.books.map((item, index) => (
-          <li key={index}>
+        {slug.books.map((item) => (
+          <li key={item.title}>
             {item.ordinal}: {item.title}
           </li>
         ))}
