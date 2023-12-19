@@ -11,13 +11,11 @@ export default function Character() {
   const id = router.query.id;
   console.log("🚀  id:", id);
 
-  const { data, error, isLoading } = useSWR(
-    `https://swapi.dev/api/people/${id}`,
-    fetcher
-  );
+  const data = useSWR(`https://swapi.dev/api/people/${id}`, fetcher);
+  console.log("🚀  swr:", swr);
 
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
+  // if (error) return <div>failed to load</div>;
+  // if (isLoading) return <div>loading...</div>;
 
   return (
     <Layout>
