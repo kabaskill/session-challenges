@@ -7,7 +7,10 @@ export default function handler(request, response) {
     name: chance.name(),
     twitter: chance.twitter(),
     geo: chance.geohash(),
+    score: chance.integer({ min: 0, max: 1000 }),
   };
 
-  response.status(200).json(character);
+  setTimeout(() => {
+    response.status(200).json(character);
+  }, 1000);
 }
