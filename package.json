@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "uid": "^2.0.2",
-    "use-local-storage-state": "^19.1.0"
-  }
-}
