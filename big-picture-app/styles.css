@@ -1,0 +1,30 @@
+:root {
+  --background-color: rgb(65, 70, 80);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+
+  margin: auto;
+  margin-top: 6rem;
+  min-width: 100vh;
+
+  display: flex;
+}
+
+section {
+  background-color: azure;
+  padding: 2rem;
+}
+
+ul {
+  list-style: none;
+}
